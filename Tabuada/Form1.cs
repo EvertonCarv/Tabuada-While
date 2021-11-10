@@ -48,5 +48,12 @@ namespace Tabuada
             lstTabuada.Items.Clear();
             txtNumero.Focus();
         }
+        private void KeyPress_Allow_Only_Numbers(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

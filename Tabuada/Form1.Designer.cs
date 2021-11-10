@@ -64,6 +64,7 @@ namespace Tabuada
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 23);
             this.txtNumero.TabIndex = 2;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_Allow_Only_Numbers);
             // 
             // lstTabuada
             // 
